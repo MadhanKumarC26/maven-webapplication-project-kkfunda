@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1> Welcome to MADHAN DEVOPS coaching Portal </h1>
+    <h1> Welcome to MADHAN DEVOPS coaching Portal V1 </h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -54,7 +54,7 @@
 
     <!-- Server Info -->
     <div class="info-card">
-        <h3>🌐 Server Side Information</h3>
+        <h3>🌐 Server IP Information</h3>
         <hr>
         <%
             InetAddress inetAddress = InetAddress.getLocalHost();
