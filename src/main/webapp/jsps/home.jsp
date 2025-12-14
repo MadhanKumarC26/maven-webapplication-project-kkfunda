@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1> Welcome to MADHAN DEVOPS coaching Portal V1 </h1>
+    <h1> Welcome to MADHAN DEVOPS coaching Portal V2 </h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -66,7 +66,7 @@
 
     <!-- Client Info -->
     <div class="info-card">
-        <h3>💻 Client Side Information</h3>
+        <h3>💻 Client IP Information</h3>
         <hr>
         <p><b>Client IP Address:</b> <%= request.getRemoteAddr() %></p>
         <p><b>Client Host Name:</b> <%= request.getRemoteHost() %></p>
