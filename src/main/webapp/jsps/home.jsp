@@ -1,98 +1,102 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.net.*" %>
+<%@ page import="java.net.InetAddress" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>KK FUNDA Home Page</title>
-<link href="images/kkfunda.jpg" rel="icon">
-<!-- Bootstrap CDN -->
+<title>Madhan | DevOps Training Portal</title>
+
+<link rel="icon" href="images/kkfunda.jpg">
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
     body {
-        background: #f9f9f9;
-        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        font-family: "Segoe UI", Arial, sans-serif;
     }
     header {
-        background: linear-gradient(90deg, #007bff, #00c6ff);
+        background: linear-gradient(90deg, #0d6efd, #00c6ff);
         color: white;
-        padding: 20px;
+        padding: 30px 10px;
         text-align: center;
     }
-    h1, h3 {
-        margin: 10px 0;
+    header h1 {
+        font-weight: bold;
     }
-    .info-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 700px;
+    .card-custom {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
     }
     footer {
-        margin-top: 30px;
-        background: #222;
-        color: white;
+        background: #212529;
+        color: #ccc;
         padding: 15px;
         text-align: center;
+        margin-top: 40px;
     }
     footer a {
-        color: #00c6ff;
+        color: #0dcaf0;
         text-decoration: none;
     }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1> Welcome to MADHAN DEVOPS coaching Portal V3.00 </h1>
-    <h3>Training | Deveps concepts | Consulting</h3>
+    <h1>🚀 Welcome to MADHAN DevOps Training Portal</h1>
+    <p class="lead mb-0">Training | DevOps Concepts | Real-Time Consulting</p>
 </header>
 
-<div class="container">
+<div class="container mt-4">
 
     <!-- Server Info -->
-    <div class="info-card">
-        <h3>🌐 Server IP Information</h3>
+    <div class="card card-custom p-4">
+        <h4>🌐 Server Information</h4>
         <hr>
         <%
-            InetAddress inetAddress = InetAddress.getLocalHost();
-            String ip = inetAddress.getHostAddress();
-            out.println("<p><b>Server Host Name:</b> " + inetAddress.getHostName() + "</p>");
-            out.println("<p><b>Server IP Address:</b> " + ip + "</p>");
+            InetAddress inet = InetAddress.getLocalHost();
         %>
+        <p><b>Server Host Name:</b> <%= inet.getHostName() %></p>
+        <p><b>Server IP Address:</b> <%= inet.getHostAddress() %></p>
     </div>
 
     <!-- Client Info -->
-    <div class="info-card">
-        <h3>💻 Client IP Information</h3>
+    <div class="card card-custom p-4">
+        <h4>💻 Client Information</h4>
         <hr>
         <p><b>Client IP Address:</b> <%= request.getRemoteAddr() %></p>
         <p><b>Client Host Name:</b> <%= request.getRemoteHost() %></p>
     </div>
 
     <!-- Contact Info -->
-    <div class="info-card text-center">
-        <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="120" class="mb-3 rounded-circle shadow">
-        <h4>KK FUNDA</h4>
-        <p><b>Address:</b>  Bangalore Zip-533404 </p>
-        <p><b>Phone:</b> +91-9676831734</p>
+    <div class="card card-custom p-4 text-center">
+        <img src="images/kkfunda.jpg" width="120" class="rounded-circle shadow mb-3" alt="Madhan Logo">
+        <h4>MADHAN <small class="text-muted">(KK FUNDA)</small></h4>
+        <p class="mb-1"><b>Address:</b> Bangalore – 533404</p>
+        <p class="mb-1"><b>Phone:</b> +91 9676831734</p>
         <p><b>Email:</b> <a href="mailto:raj@gmail.com">raj@gmail.com</a></p>
-        <a href="mailto:raj@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
+        <a href="mailto:raj@gmail.com" class="btn btn-primary mt-2">📧 Contact MADHAN</a>
     </div>
 
-    <!-- Service Links -->
-    <div class="info-card text-center">
+    <!-- Services -->
+    <div class="card card-custom p-4 text-center">
         <h4>⚙️ Our Services</h4>
-        <p><a href="services/employee/getEmployeeDetails" class="btn btn-success">Get Employee Details</a></p>
+        <p class="mt-3">
+            <a href="services/employee/getEmployeeDetails" class="btn btn-success">
+                🔍 Get Employee Details
+            </a>
+        </p>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2024 KK FUNDA Training & Development Center</p>
-    <p><small>Powered by <a href="https://google.com/">KK FUNDA</a></small></p>
+    <p class="mb-1">© 2024 MADHAN – DevOps Training & Consulting</p>
+    <small>Powered by <a href="https://google.com/" target="_blank">KK FUNDA</a></small>
 </footer>
 
 <!-- Bootstrap JS -->
