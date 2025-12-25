@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Madhan | DevOps Excellence Portal v2.00</title>
+<title>Madhan | DevOpsecops Excellence Portal v2.00</title>
 
 <link rel="icon" href="images/kkfunda.jpg">
 
