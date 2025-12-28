@@ -77,7 +77,7 @@
 
 <!-- HERO -->
 <section class="hero">
-    <h1>🚀 MADHAN DevOps Excellence Portal v1 </h1>
+    <h1>🚀 MADHAN DevOpsocps Excellence Portal v1 </h1>
     <p> .Training 
         .Advanced DevOps Concepts including CI/CD 
         . Real-Time project include 20 microservices</p>
